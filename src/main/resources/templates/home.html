@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,5 +13,9 @@
 <hr>
 
 <h2>Welcome to the company home page</h2>
+
+<form action="#" th:action="@{/logout}" th:method="POST">
+    <button type="submit">Logout</button>
+</form>
 </body>
 </html>
