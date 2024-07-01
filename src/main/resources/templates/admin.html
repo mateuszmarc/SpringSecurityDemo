@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.tymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Admin</title>
+</head>
+<body>
+<h1>Company Home page</h1>
+
+<hr>
+
+<h2>Welcome to the company admin page - page available only form employees with ADMIN role</h2>
+
+<hr>
+
+<p>
+  User: <span sec:authentication="principal.username"></span>
+</p>
+
+<p>
+  Role(s): <span sec:authentication="principal.authorities"></span>
+</p>
+
+<div>
+  <a th:href="@{/leaders}">Got to leaders page</a>
+</div>
+
+<div>
+  <a th:href="@{/admin}">Got to admin page</a>
+</div>
+
+<form action="#" th:action="@{/logout}" th:method="POST">
+  <button type="submit">Logout</button>
+</form>
+
+<div>
+  <a th:href="@{/}">Go back to home page</a>
+</div>
+</body>
+</html>

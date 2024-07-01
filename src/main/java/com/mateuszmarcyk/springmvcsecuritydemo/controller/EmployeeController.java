@@ -15,4 +15,14 @@ public class EmployeeController {
     public String showLoginForm() {
         return "login-form";
     }
+
+    @GetMapping("/leaders")
+    public String showLeadersPage() {
+        return "leaders";
+    }
+
+    @GetMapping("/admin")
+    public String showAdminPage() {
+        return "admin";
+    }
 }
