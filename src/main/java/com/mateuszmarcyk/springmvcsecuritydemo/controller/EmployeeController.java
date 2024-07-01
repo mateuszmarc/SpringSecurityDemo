@@ -25,4 +25,9 @@ public class EmployeeController {
     public String showAdminPage() {
         return "admin";
     }
+
+    @GetMapping("/access-denied")
+    public String showAccessDenied() {
+        return "access-denied";
+    }
 }

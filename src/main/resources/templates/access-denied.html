@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.tymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Admin</title>
+</head>
+<body>
+<h1>Company admin page</h1>
+
+<hr>
+
+<h2 class="alert alert-danger">Access denied</h2>
+
+<hr>
+
+<h3>You don't have access to these resources</h3>
+
+<hr>
+
+<p>
+    User: <span sec:authentication="principal.username"></span>
+</p>
+
+<p>
+    Role(s): <span sec:authentication="principal.authorities"></span>
+</p>
+
+<hr>
+
+<a th:href="@{/}">Got to the main page</a>
+
+<hr>
+
+<form action="#" th:action="@{/logout}" th:method="POST">
+    <button type="submit">Logout</button>
+</form>
+
+<hr>
+
+</body>
+</html>
