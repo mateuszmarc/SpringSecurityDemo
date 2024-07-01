@@ -46,7 +46,7 @@ public class EmployeeSecurityConfig {
                                 .loginPage("/login")
                                 .loginProcessingUrl("/login")
                                 .permitAll()
-                );
+                ).logout(logout -> logout.permitAll());
         return httpSecurity.build();
     }
 }
