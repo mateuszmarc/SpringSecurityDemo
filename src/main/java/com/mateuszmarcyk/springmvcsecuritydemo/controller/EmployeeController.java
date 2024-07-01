@@ -7,7 +7,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class EmployeeController {
 
     @GetMapping("/")
-    public String showHome() {
+    public String showHomePage() {
         return "home";
+    }
+
+    @GetMapping("/login")
+    public String showLoginForm() {
+        return "login-form";
     }
 }
