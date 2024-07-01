@@ -24,20 +24,31 @@
   Role(s): <span sec:authentication="principal.authorities"></span>
 </p>
 
+<hr>
+
 <div>
   <a th:href="@{/leaders}">Got to leaders page</a>
 </div>
+
+<hr>
 
 <div>
   <a th:href="@{/admin}">Got to admin page</a>
 </div>
 
-<form action="#" th:action="@{/logout}" th:method="POST">
-  <button type="submit">Logout</button>
-</form>
+<hr>
 
 <div>
   <a th:href="@{/}">Go back to home page</a>
 </div>
+
+<hr>
+
+<form action="#" th:action="@{/logout}" th:method="POST">
+  <button type="submit">Logout</button>
+</form>
+
+<hr>
+
 </body>
 </html>

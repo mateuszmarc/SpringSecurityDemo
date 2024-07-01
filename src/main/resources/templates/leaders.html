@@ -24,14 +24,23 @@
     Role(s): <span sec:authentication="principal.authorities"></span>
 </p>
 
+<hr>
+
 <div>
     <a th:href="@{/admin}">Got to admin page</a>
 </div>
+
+<hr>
+
+<a th:href="@{/}">Got to the main page</a>
+
+<hr>
 
 <form action="#" th:action="@{/logout}" th:method="POST">
     <button type="submit">Logout</button>
 </form>
 
-<a th:href="@{/}">Got to the main page</a>
+<hr>
+
 </body>
 </html>

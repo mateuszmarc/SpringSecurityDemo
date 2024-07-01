@@ -39,6 +39,9 @@ public class EmployeeSecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.authorizeHttpRequests(configurer ->
                         configurer
+                                .requestMatchers("/").hasAnyRole("EMPLOYEE", "MANAGER", "ADMIN")
+                                .requestMatchers("/leaders/**").hasAnyRole("MANAGER", "ADMIN")
+                                .requestMatchers("/admin/**").hasRole("ADMIN")
                                 .anyRequest().authenticated()
                 )
                 .formLogin(form ->
