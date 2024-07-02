@@ -12,7 +12,7 @@ CREATE TABLE `users` (
   `password` char(68) NOT NULL,
   `enabled` tinyint NOT NULL,
   PRIMARY KEY (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Inserting data for table `users`
@@ -40,7 +40,7 @@ CREATE TABLE `authorities` (
   `authority` varchar(50) NOT NULL,
   UNIQUE KEY `authorities4_idx_1` (`username`,`authority`),
   CONSTRAINT `authorities4_ibfk_1` FOREIGN KEY (`username`) REFERENCES `users` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Inserting data for table `authorities`
